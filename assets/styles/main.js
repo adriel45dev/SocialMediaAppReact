@@ -1,55 +1,15 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, StatusBar, Platform } from "react-native";
 
-const style = StyleSheet.create({
-  header: {
+const globalStyle = StyleSheet.create({
+  AndroidSafeArea: {
     flex: 1,
-    paddingTop: 40,
-    paddingRight: 26,
-    paddingLeft: 17,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+    backgroundColor: "#fff",
+    // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 
-  messageIcon: {
-    padding: 12,
-    backgroundColor: "#F9FAFB",
-    borderRadius: 100,
-    position: "relative",
-  },
-
-  messageNumberContainer: {
-    width: 15,
-    height: 15,
-    backgroundColor: "#F35BAC",
-    borderRadius: 10,
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    position: "absolute",
-    top: 0,
-    right: 0,
-  },
-
-  messageNumber: {
-    fontSize: 6,
-    lineHeight: 7,
-    fontWeight: "600",
-    color: "#fff",
-  },
-  userStoryContainer: {
-    paddingTop: 12,
-    paddingHorizontal: 28,
-    height: 100,
-  },
-
-  userPostContainer: {
-    marginTop: 30,
-    paddingHorizontal: 24,
-    height: "100%",
+  flex: {
     flex: 1,
   },
 });
 
-export default style;
+export default globalStyle;
